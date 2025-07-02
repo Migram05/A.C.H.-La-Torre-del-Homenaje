@@ -1,0 +1,133 @@
+body {
+	background-color: #2e3537;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.book {
+	width: 400px;
+	height: 550px;
+	position: relative;
+	transition-duration: 0.5s;
+	perspective: 1500;
+}
+input {
+	display: none;
+}
+.cover, .back-cover {
+	background-color: #5e3800;
+	width: 100%;
+	height: 100%;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+.cover {
+	position: absolute;
+	z-index: 999;
+	transition: transform 0.7s;
+}
+.cover label {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
+	background-color: white;
+	width: 380px;
+	height: 530px;
+	margin-top: 10px;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 0.5s;
+}
+.page img {
+	width: 100%;
+	height: 100%;
+}
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 1000;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
+}
+.next {
+	right: 1em;
+}
+.prev {
+	left: 1em;
+}
+#page1 {
+	z-index: 998;
+}
+#page2 {
+	z-index: 997;
+}
+#page3 {
+	z-index: 996;
+}
+#checkbox-cover:checked ~ .book {
+	transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover {
+	transition: transform 1s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
+	z-index: 996;
+}
+#checkbox-cover:checked ~ .book .page {
+	box-shadow: 0 0 3px rgb(99, 98, 98);
+
+}
+#checkbox-page1:checked ~ .book #page1 {
+	transform: rotateY(-180deg);
+	z-index: 997;
+}
+#checkbox-page2:checked ~ .book #page2 {
+	transform: rotateY(-180deg);
+	z-index: 998;
+}
+
+
+
+
+/*#navBar {
+    background-color:rgb(138, 138, 138);
+    transition: all 0.7s;
+}
+.button {
+    color: black;
+    transition: 0.7s;
+}
+.title {
+    font-size: 30px;
+    font-weight:bold;
+}
+.button:hover {
+    color:rgba(255,217,102, 1);
+}*/

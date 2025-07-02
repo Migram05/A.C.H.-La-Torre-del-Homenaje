@@ -18,6 +18,5 @@ body {
 .button:hover {
     color:rgba(255,217,102, 1);
 }
-.button:visited{
-    color: black;
-}
+
+
