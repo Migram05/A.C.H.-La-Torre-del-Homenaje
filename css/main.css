@@ -1,3 +1,12 @@
+@font-face {
+  font-family: medievalFont;
+  src: url("../resources/fonts/MedievalSharp-Regular.ttf");
+}
+
+*{
+    font-family: medievalFont;
+}
+
 body {
     background-color:rgb(122, 122, 122);
     -ms-overflow-style: none;
