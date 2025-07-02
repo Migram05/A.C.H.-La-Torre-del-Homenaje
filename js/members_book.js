@@ -2,7 +2,7 @@ var front = document.querySelector('.face-front');
 var back = document.querySelector('.face-back');
 var flip = document.querySelector('.book-content');
 var pages = document.querySelectorAll('.page');
-var portada = document.querySelectorAll('#portada');
+var cover = document.querySelectorAll('#portada');
 
 var contZindex = 2;
 var customZindex = 1;
@@ -24,7 +24,7 @@ for (var i = 0; i < pages.length; i++) {
 			contZindex +=20;
 			setTimeout(function(){
 				unoThis.style.transform = 'rotateY(-180deg)';
-			}, 500);
+			}, 100);
 		}
 		if (tgt.getAttribute("class") == 'face-back') {
 			unoThis.style.zIndex = contZindex;
@@ -32,7 +32,7 @@ for (var i = 0; i < pages.length; i++) {
 
 			setTimeout(function(){
 				unoThis.style.transform = 'rotateY(0deg)';
-			}, 500);
+			}, 100);
 		}
 
 		if (tgt.getAttribute('id') == 'portada') {

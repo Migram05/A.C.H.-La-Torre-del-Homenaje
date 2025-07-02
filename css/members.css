@@ -7,7 +7,7 @@
     font-family: medievalFont;
 }
 body {
-	background-color: #2e3537;
+	background-color:rgb(122, 122, 122);
 	height: 100vh;
 	display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ p{
 	width: 40%;
 	min-width: 300px;
 	max-width: 300;
-	height: 400px;
+	height: 470px;
 	position: relative;
 	perspective: 1000px;
 	transition: 0.5s;
@@ -77,6 +77,7 @@ p{
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;
 }
+
 #portada, #portada-back{
 	background-size: 100% 100%;
     background-image: url("../resources/images/textures/old_leather.jpg");
@@ -89,7 +90,7 @@ p{
 }
 .trnsf-reset{
 	transform: translateX(0px);
-}
+} 
 
 /* @media para hacer el texto responsivo */
 
