@@ -24,7 +24,7 @@ for (var i = 0; i < pages.length; i++) {
 			contZindex +=20;
 			setTimeout(function(){
 				unoThis.style.transform = 'rotateY(-180deg)';
-			}, 100);
+			}, 50);
 		}
 		if (tgt.getAttribute("class") == 'face-back') {
 			unoThis.style.zIndex = contZindex;
@@ -32,18 +32,25 @@ for (var i = 0; i < pages.length; i++) {
 
 			setTimeout(function(){
 				unoThis.style.transform = 'rotateY(0deg)';
-			}, 100);
+			}, 50);
 		}
 
-		if (tgt.getAttribute('id') == 'portada') {
+		/*if (tgt.getAttribute('id') == 'portada') {
 			flip.classList.remove("trnsf-reset");
 			flip.classList.add("trnsf");
 		}
-		if (tgt.getAttribute('id') == 'trsf') {
+		else if (tgt.getAttribute('id') == 'trsf') {
 			flip.classList.remove("trnsf");
 			flip.classList.add("trnsf-reset");
 		}
-
+		else if (tgt.getAttribute('id') == 'trsfInv') {
+			flip.classList.remove("trnsf");
+			flip.classList.add("trnsf-inv");
+		}
+		else if (tgt.getAttribute('id') == 'portada-back') {
+			flip.classList.add("trnsf");
+			flip.classList.remove("trnsf-inv");
+		}*/
 	});
 }
 

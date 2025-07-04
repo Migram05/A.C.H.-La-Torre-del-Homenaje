@@ -6,17 +6,20 @@
         <title>Miembros de la Torre del Homenaje</title>
         <link rel="icon" href="../resources/images/logo/Logo_128x128.png">
 
-        <script src="../js/members_book.js"></script> 
         <link rel="stylesheet" href="../css/members.css">
     </head>
 
-  <body>
+    <body>
     
-    <h1>Nuestros socios</h1>
-    <a href="../index.html" class="nav-link link-primary button">Index</a>
+        <h1>Nuestros socios</h1>
+        <a href="../index.html" class="nav-link link-primary button">Index</a>
     
-    <div class="container" id="container">
+        <!--Estructura del libro de miembros-->
+        <div class="container">
             <div class="book-content">
+                <!--Estructura de una página, si se quieren añadir basta con copiar esta estructura-->
+                <!--Se reserva el id "portada" solo para la primera página, lo mismo con "portada-back"-->
+
                 <div class="page">
                     <div class="face-front" id="portada"></div>
                     <div class="face-back" id="trsf">
@@ -47,7 +50,7 @@
                 </div>
 
                 <div class="page">
-                    <div class="face-front">
+                    <div class="face-front" id="trsfInv">
                         <h1>Title 6</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint perferendis nemo blanditiis impedit aut soluta quia illum deserunt, vero quod ducimus placeat voluptate quidem error sequi, earum eos minima in!</p>
                     </div>
@@ -56,8 +59,7 @@
                 </div>
             </div>
         </div>
-        
-    <script src="../js/members_book.js"></script>
+    
     </body>
-  </body>
+    <script src="../js/members_book.js"></script>
 </html>
