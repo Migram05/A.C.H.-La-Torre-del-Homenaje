@@ -6,11 +6,31 @@
         <title>Contacto Torre del Homenaje</title>
         <link rel="icon" href="../resources/images/logo/Logo_128x128.png">
 
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="../css/contact.css">
     </head>
 
   <body>
     <h1>Contáctanos</h1>
     <a href="../index.html" class="nav-link link-primary button">Index</a>
+
+
+    <!--Ver: https://stackoverflow.com/questions/7381150/how-to-send-an-email-from-javascript-->
+    <!--Y: https://postmail.invotes.com/-->
+    <div class="container">
+      <form id="form">
+
+        <label for="fname">Nombre</label>
+        <input type="text" id="fname" name="firstname" placeholder="Escribe tu nombre">
+
+        <label for="email">Correo electrónico</label>
+        <input type="text" id="email" name="email" placeholder="Escribe tu correo">
+
+        <label for="subject">Mensaje</label>
+        <textarea id="subject" name="subject" placeholder="Escribe aquí tu mensaje" style="height:200px"></textarea>
+
+        <input type="submit" id="sumbit" value="Submit" >
+
+      </form>
+    </div> 
   </body>
 </html>
