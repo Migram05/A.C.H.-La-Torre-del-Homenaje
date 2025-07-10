@@ -1,64 +1,14 @@
-var form = document.querySelector('#form');
-var firstName = document.querySelector('#fname');
-var emailAddress = document.querySelector('#email');
-var emailSubject = document.querySelector('#subject');
-var sendButton = document.querySelector('#sumbit');
+document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault(); //Evita que se recargue la página
 
-sendButton.addEventListener('click', function(e){
-	
-});
+      const name = document.getElementById('fname').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('subject').value;
 
+      const destinatario = "achlatorre@gmail.com";
+      const asunto = encodeURIComponent("Mensaje de la web");
+      const cuerpo = encodeURIComponent(`Emisor: ${name}\nDirección de correo: ${email}\n${message}`);
 
-var back = document.querySelector('.face-back');
-var flip = document.querySelector('.book-content');
-var pages = document.querySelectorAll('.page');
-var cover = document.querySelectorAll('#portada');
-
-
-for (var i = 0; i < pages.length; i++) {
-	pages[i].style.zIndex = customZindex;
-	customZindex--;
-
-	pages[i].addEventListener('click', function(e){
-
-		var tgt = e.target;
-		var unoThis = this;
-
-		unoThis.style.zIndex = contZindex;
-		contZindex++;
-
-		if (tgt.getAttribute('class') == 'face-front') {
-			unoThis.style.zIndex = contZindex;
-			contZindex +=20;
-			setTimeout(function(){
-				unoThis.style.transform = 'rotateY(-180deg)';
-			}, 50);
-		}
-		if (tgt.getAttribute("class") == 'face-back') {
-			unoThis.style.zIndex = contZindex;
-			contZindex +=20;
-
-			setTimeout(function(){
-				unoThis.style.transform = 'rotateY(0deg)';
-			}, 50);
-		}
-
-		/*if (tgt.getAttribute('id') == 'portada') {
-			flip.classList.remove("trnsf-reset");
-			flip.classList.add("trnsf");
-		}
-		else if (tgt.getAttribute('id') == 'trsf') {
-			flip.classList.remove("trnsf");
-			flip.classList.add("trnsf-reset");
-		}
-		else if (tgt.getAttribute('id') == 'trsfInv') {
-			flip.classList.remove("trnsf");
-			flip.classList.add("trnsf-inv");
-		}
-		else if (tgt.getAttribute('id') == 'portada-back') {
-			flip.classList.add("trnsf");
-			flip.classList.remove("trnsf-inv");
-		}*/
-	});
-}
-
+      const mailtoLink = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+      window.location.href = mailtoLink;
+      });
